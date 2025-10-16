@@ -11,17 +11,4 @@ define ("DBNAME", "4398985_mybase");
                 die("Connection failed: " . mysqli_connect_error());
         }
         
-        $sql = "SELECT ID_Ryby, Nazwa, stan_magazynowy, cena, występowanie FROM Rybny";
-        $result = mysqli_query($conn, $sql);
-        
-        if (mysqli_num_rows($result) > 0) {
-                // output data of each row
-                while($row = mysqli_fetch_assoc($result)) {
-                        echo "ID: " . $row["ID_Ryby"]. " - Nazwa: " . $row["Nazwa"]. " - Stan Magazynowy: " . $row["stan_magazynowy"]. " - Cena: " . $row["Cena"]. " - Występowanie: " . $row["występowanie"]. "<br>";
-                }
-                } else {
-                echo "0 results";
-                }
-        
-        mysqli_close($conn);
         ?>
